@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import embeds from "astro-embed/integration";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 
@@ -8,6 +9,7 @@ export default defineConfig({
   trailingSlash: "ignore",
   outDir: "dist",
   integrations: [
+    embeds(),
     sitemap(),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
