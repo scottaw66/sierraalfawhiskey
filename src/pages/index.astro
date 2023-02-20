@@ -1,0 +1,11 @@
+---
+import config from "config";
+import { Icon } from "astro-icon";
+import Base from "../layouts/Base.astro";
+
+const title = config.get("title");
+---
+
+<Base title={title}>
+  <article>HI!!</article>
+</Base>
