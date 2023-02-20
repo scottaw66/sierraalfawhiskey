@@ -1,0 +1,14 @@
+{
+  "title": "SierraAlfaWhiskey",
+  "description": "eBrain for Scott Willsey: Wiki, blog, links, and more.",
+  "url": "https://sierraalfawhiskey.com",
+  "name": "SierraAlfaWhiskey",
+  "social": {
+    "mastodon": "https://fediverse.cyou/scottaw",
+    "github": "https://github.com/scottaw66"
+  },
+  "posts": {
+    "path": "/",
+    "paginationSize": 7
+  }
+}
