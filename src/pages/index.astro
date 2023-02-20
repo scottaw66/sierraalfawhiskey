@@ -1,11 +1,62 @@
 ---
 import config from "config";
-import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
 import Base from "../layouts/Base.astro";
 
 const title = config.get("title");
+import midnight1 from "../images/midnight/IMG_0329.jpeg";
+import midnight2 from "../images/midnight/IMG_0329.jpeg";
 ---
 
 <Base title={title}>
-  <article>HI!!</article>
+  <article>
+    <h1>HI!!</h1>
+    <div>
+      <Picture
+        src={midnight1}
+        widths={[650, 1300, 1950]}
+        sizes="(max-width: 650px) 95vw, 650px"
+        formats={["avif", "webp"]}
+        alt="Midnight"
+      />
+
+      <picture>
+        <source
+          type="image/avif"
+          srcset="/_astro/IMG_0329.d0c4ff59_Z1e3tEe.avif 650w,/_astro/IMG_0329.d0c4ff59_gQPDV.avif 1300w,/_astro/IMG_0329.d0c4ff59_243mpt.avif 1950w"
+          sizes="(max-width: 650px) 95vw, 650px"
+        /><source
+          type="image/webp"
+          srcset="/_astro/IMG_0329.d0c4ff59_ZuHEGs.webp 650w,/_astro/IMG_0329.d0c4ff59_10cEBH.webp 1300w,/_astro/IMG_0329.d0c4ff59_Z2hMWqG.webp 1950w"
+          sizes="(max-width: 650px) 95vw, 650px"
+        /><source
+          type="image/jpeg"
+          srcset="/_astro/IMG_0329.d0c4ff59_ZUQf71.jpeg 650w,/_astro/IMG_0329.d0c4ff59_z45c9.jpeg 1300w,/_astro/IMG_0329.d0c4ff59_2mfAWG.jpeg 1950w"
+          sizes="(max-width: 650px) 95vw, 650px"
+        />
+        <img
+          alt="Midnight"
+          src="/_astro/IMG_0329.d0c4ff59_2mfAWG.jpeg"
+          loading="lazy"
+          decoding="async"
+          class="astro-J7PV25F6"
+          width="1000"
+          height="auto"
+        />
+      </picture>
+    </div>
+
+    <style>
+      article {
+        max-width: 800px;
+        margin: 5rem auto;
+      }
+      div {
+        margin: 2rem auto;
+      }
+      div img {
+        margin: 1rem 0;
+      }
+    </style>
+  </article>
 </Base>
