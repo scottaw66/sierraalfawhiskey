@@ -1,27 +1,65 @@
 ---
+import { Image } from "astro:assets";
 import config from "config";
 import Base from "../layouts/Base.astro";
+import Post from "../components/Post.astro";
+import { getCollection } from "astro:content";
 
 const title = config.get("title");
+let description = config.get("description");
+
+let allPosts = await getCollection("posts");
+allPosts = allPosts.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+
+const pageSize = config.get("posts.paginationSize");
+const indexPosts = allPosts.slice(0, Number(pageSize));
+
+import siteHeader from "../assets/images/cat.png";
 ---
 
-<Base title={title}>
-  <article>
-    <style>
-      article {
-        max-width: 800px;
-        margin: 5rem auto;
+<Base title={title} description={description}>
+  <Image
+    src={siteHeader.src}
+    width="300"
+    height="300"
+    alt="A siteHeadership in space."
+  />
+  <h1>{title}</h1>
+  <span data-pagefind-ignore>
+    <section aria-label="Blog post list">
+      {
+        indexPosts.map((post) => {
+          return <Post post={post} />;
+        })
       }
-      div {
-        margin: 2rem auto;
-      }
-      div img {
-        margin: 1rem 0;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
-  </article>
+
+      <nav id="pager">
+        {
+          allPosts.length > pageSize ? (
+            <div>
+              <a href="/2">
+                Older Posts
+                <Icon name="ic:round-arrow-circle-right" />
+              </a>
+            </div>
+          ) : null
+        }
+      </nav>
+    </section>
+  </span>
 </Base>
+<style>
+  article {
+    max-width: 800px;
+    margin: 5rem auto;
+  }
+  div {
+    margin: 2rem auto;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
