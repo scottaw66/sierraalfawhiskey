@@ -16,14 +16,14 @@ allPosts = allPosts.sort(
 const pageSize = config.get("posts.paginationSize");
 const indexPosts = allPosts.slice(0, Number(pageSize));
 
-import siteHeader from "../assets/images/cat.png";
+import siteHeader from "../assets/images/NeonBrain.svg";
 ---
 
 <Base title={title} description={description}>
   <Image
     src={siteHeader.src}
-    width="300"
-    height="300"
+    width="200"
+    height="200"
     alt="A siteHeadership in space."
   />
   <h1>{title}</h1>

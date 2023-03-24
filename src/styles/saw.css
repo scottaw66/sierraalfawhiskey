@@ -1,8 +1,8 @@
 @import "normalize.css";
 
 html {
-  --background-light: #f9f4ef;
-  --headline-light: #020826;
+  --background-light: #000034;
+  --headline-light: #98aad9;
   --text-light: #716040;
   --button-light: #8c7851;
   --button-text-light: #fffffe;
@@ -12,6 +12,10 @@ html {
   --highlight-light: #8c7851;
   --secondary-light: #eaddcf;
   --tertiary-light: #f25042;
+
+  --background-dark: #000034;
+  --headline-dark: #98aad9;
+  --text-dark: #a2e0e0;
 }
 
 :root {
@@ -26,4 +30,9 @@ html {
   --highlight: var(--highlight-light);
   --secondary: var(--secondary-light);
   --tertiary: var(--tertiary-light);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--headline);
 }
