@@ -1,16 +1,56 @@
 ---
-import logo from "../images/site-header.svg";
+import { Image } from "astro:assets";
+import siteHeader from "../assets/images/NeonBrain.svg";
 ---
 
-<a href="/"
-  ><img class="header-image" src="/images/site-header.svg" alt="logo" /></a
->
+<div class="header">
+  <a href="/"
+    ><Image
+      src={siteHeader.src}
+      width="180"
+      height="180"
+      alt="Sierra•Alfa•Whiskey•the official e-brain of scott willsey•"
+    /></a
+  ><div class="title">
+    <div>Sierra•Alfa•Whiskey</div><div class="sub-title">
+      •the official e-brain of scott willsey•
+    </div>
+  </div>
+</div>
 
 <style>
-  .header-image {
-    height: 10rem;
-    position: absolute;
-    left: calc(50% - 80px);
-    top: 0.25rem;
+  .header {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .header img {
+    margin: 0 1rem;
+    width: 80px;
+    height: auto;
+  }
+
+  @media (max-width: 650px) {
+    .header img {
+      width: 40px;
+      height: auto;
+      margin: 0.5rem;
+      padding: 0;
+    }
+  }
+  .header div.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Grandsans-Rough;
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+    text-align: center;
+  }
+  .header div.title div.sub-title {
+    font-size: clamp(0.3rem, 1vw + 0.3rem, 1.2rem);
+    text-align: center;
+    color: var(--subtitle);
   }
 </style>

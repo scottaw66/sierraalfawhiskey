@@ -15,13 +15,15 @@ html {
 
   --background-dark: #000034;
   --headline-dark: #98aad9;
+  --subtitle-dark: #b7dce2;
   --text-dark: #a2e0e0;
 }
 
 :root {
-  --background: var(--background-light);
-  --headline: var(--headline-light);
-  --text: var(--text-light);
+  --background: var(--background-dark);
+  --headline: var(--headline-dark);
+  --subtitle: var(--subtitle-dark);
+  --text: var(--text-dark);
   --button: var(--button-light);
   --button-text: var(--button-text-light);
 
@@ -30,6 +32,16 @@ html {
   --highlight: var(--highlight-light);
   --secondary: var(--secondary-light);
   --tertiary: var(--tertiary-light);
+}
+
+@font-face {
+  font-family: Grandsans-Regular;
+  src: url("/fonts/Grandsans/Grandsans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Grandsans-Rough;
+  src: url("/fonts/Grandsans/Grandsans-Rough.woff2") format("woff2");
 }
 
 html {

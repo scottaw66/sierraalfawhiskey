@@ -14,39 +14,52 @@ const { Content } = await post.render();
 ---
 
 <article>
-  <header>
-    <h1>
-      <a
-        href={new URL(
-          path.join(config.get("posts.path"), post.slug),
-          config.get("url")
-        )}
-        >{titleCase(post.data.title)}
-      </a>
-    </h1>
-    <div class="time">
-      <Icon pack="bi" name="calendar2-week-fill" />
-      <time datetime={post.data.date}>
+  <div class="blog-post">
+    <header>
+      <h1>
         <a
           href={new URL(
             path.join(config.get("posts.path"), post.slug),
             config.get("url")
           )}
-        >
-          {postdate(post.data.date)}
+          >{titleCase(post.data.title)}
         </a>
-      </time>
-    </div>
-  </header>
-  <Content />
+      </h1>
+      <div class="time">
+        <Icon pack="bi" name="calendar2-week-fill" />
+        <time datetime={post.data.date}>
+          <a
+            href={new URL(
+              path.join(config.get("posts.path"), post.slug),
+              config.get("url")
+            )}
+          >
+            {postdate(post.data.date)}
+          </a>
+        </time>
+      </div>
+    </header>
+
+    <Content />
+  </div>
 </article>
-<style>
-  [astro-icon] {
+<style is:global>
+  div.blog-post [astro-icon] {
     width: 2rem;
     padding: 0 0.25rem;
     margin: -0.4em 0;
   }
-  img {
-    width: 500px;
+  div.blog-post img {
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+  @media only screen and (max-width: 790px) {
+    div.blog-post img {
+      width: 95%;
+      height: auto;
+    }
   }
 </style>

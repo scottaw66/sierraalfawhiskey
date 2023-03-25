@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import config from "config";
 import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
@@ -15,17 +14,9 @@ allPosts = allPosts.sort(
 
 const pageSize = config.get("posts.paginationSize");
 const indexPosts = allPosts.slice(0, Number(pageSize));
-
-import siteHeader from "../assets/images/NeonBrain.svg";
 ---
 
 <Base title={title} description={description}>
-  <Image
-    src={siteHeader.src}
-    width="200"
-    height="200"
-    alt="A siteHeadership in space."
-  />
   <h1>{title}</h1>
   <span data-pagefind-ignore>
     <section aria-label="Blog post list">
