@@ -29,8 +29,8 @@
   "license": "GPL",
   "dependencies": {
     "@astrojs/rss": "^2.3.2",
-    "@astrojs/sitemap": "^1.2.1",
-    "astro": "^2.1.9",
+    "@astrojs/sitemap": "^1.2.2",
+    "astro": "^2.2.0",
     "astro-embed": "^0.2.1",
     "astro-icon": "^0.8.0",
     "astro-pagefind": "file:../astro-components/astro-pagefind",
