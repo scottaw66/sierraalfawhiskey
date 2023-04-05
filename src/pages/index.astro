@@ -1,5 +1,6 @@
 ---
 import config from "config";
+import Search from "astro-pagefind/components/Search";
 import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
 import { getCollection } from "astro:content";
@@ -17,6 +18,7 @@ const indexPosts = allPosts.slice(0, Number(pageSize));
 ---
 
 <Base title={title} description={description}>
+  <Search id="search" className="pagefind-ui" />
   <span data-pagefind-ignore>
     <section aria-label="Blog post list">
       {

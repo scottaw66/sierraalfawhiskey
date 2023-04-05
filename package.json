@@ -30,19 +30,19 @@
   "dependencies": {
     "@astrojs/rss": "^2.3.1",
     "@astrojs/sitemap": "^1.2.1",
-    "astro": "^2.1.7",
+    "astro": "^2.1.8",
     "astro-embed": "^0.2.1",
     "astro-icon": "^0.8.0",
     "astro-pagefind": "file:../astro-components/astro-pagefind",
     "config": "^3.3.9",
     "date-fns": "^2.29.3",
     "date-fns-tz": "^2.0.0",
-    "nanoid": "^4.0.1",
+    "nanoid": "^4.0.2",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "astro-eslint-parser": "^0.13.2",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "eslint-plugin-astro": "^0.26.1",
     "prettier": "^2.8.7",
     "prettier-plugin-astro": "^0.8.0"

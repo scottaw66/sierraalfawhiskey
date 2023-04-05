@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import pagefind from "astro-pagefind";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
@@ -12,7 +13,7 @@ export default defineConfig({
   site: "https://sierraalfawhiskey.com/",
   trailingSlash: "ignore",
   outDir: "dist",
-  integrations: [sitemap()],
+  integrations: [pagefind(), sitemap()],
   vite: {
     ssr: {
       external: ["svgo"],
