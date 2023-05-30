@@ -7,11 +7,7 @@ export default defineConfig({
   experimental: {
     assets: true,
   },
-  image: {
-    service: "astro/assets/services/sharp",
-  },
   site: "https://sierraalfawhiskey.com/",
-  trailingSlash: "ignore",
   outDir: "dist",
   integrations: [pagefind(), sitemap()],
   vite: {
