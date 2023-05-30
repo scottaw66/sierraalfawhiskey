@@ -39,7 +39,6 @@ const { Content } = await post.render();
         </time>
       </div>
     </header>
-
     <Content />
   </div>
 </article>
@@ -48,6 +47,13 @@ const { Content } = await post.render();
     width: 2rem;
     padding: 0 0.25rem;
     margin: -0.4em 0;
+  }
+  div.blog-post h1 a {
+    color: var(--headline);
+    text-decoration: none;
+  }
+  div.blog-post h1 a:hover {
+    text-decoration: underline;
   }
   div.blog-post img {
     width: 700px;
