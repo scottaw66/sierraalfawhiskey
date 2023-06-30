@@ -38,10 +38,44 @@ html {
   font-family: Grandsans-Regular;
   src: url("/fonts/Grandsans/Grandsans-Regular.woff2") format("woff2");
 }
-
 @font-face {
   font-family: Grandsans-Rough;
   src: url("/fonts/Grandsans/Grandsans-Rough.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: ShipsWhistle-Bold;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-BoldItalic;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-BoldItalicRough;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-BoldItalicRough.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-BoldRough;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-BoldRough.woff2") format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-Italic;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-ItalicRough;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-ItalicRough.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-Regular;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: ShipsWhistle-Rough;
+  src: url("/fonts/Ships-Whistle/ShipsWhistle-Rough.woff2") format("woff2");
 }
 
 @font-face {
