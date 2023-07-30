@@ -20,7 +20,7 @@ const { Content } = await post.render();
         <a
           href={new URL(
             path.join(config.get("posts.path"), post.slug),
-            config.get("url")
+            config.get("url"),
           )}
           >{titleCase(post.data.title)}
         </a>
@@ -31,7 +31,7 @@ const { Content } = await post.render();
           <a
             href={new URL(
               path.join(config.get("posts.path"), post.slug),
-              config.get("url")
+              config.get("url"),
             )}
           >
             {postdate(post.data.date)}
