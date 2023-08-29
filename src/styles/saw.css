@@ -1,37 +1,18 @@
 @import "normalize.css";
 
-html {
-  --background-light: #000034;
-  --headline-light: #98aad9;
-  --text-light: #716040;
-  --button-light: #8c7851;
-  --button-text-light: #fffffe;
-
-  --stroke-light: #020826;
-  --main-light: #fffffe;
-  --highlight-light: #8c7851;
-  --secondary-light: #eaddcf;
-  --tertiary-light: #f25042;
-
-  --background-dark: #000034;
-  --headline-dark: #98aad9;
-  --subtitle-dark: #b7dce2;
-  --text-dark: #a2e0e0;
-}
-
 :root {
-  --background: var(--background-dark);
-  --headline: var(--headline-dark);
-  --subtitle: var(--subtitle-dark);
-  --text: var(--text-dark);
-  --button: var(--button-light);
-  --button-text: var(--button-text-light);
+  --background: #000034;
+  --headline: #98aad9;
+  --subtitle: #b7dce2;
+  --text: #a2e0e0;
+  --button: #8c7851;
+  --button-text: #fffffe;
 
-  --stroke: var(--stroke-light);
-  --main: var(--main-light);
-  --highlight: var(--highlight-light);
-  --secondary: var(--secondary-light);
-  --tertiary: var(--tertiary-light);
+  --stroke: #020826;
+  --main: #fffffe;
+  --highlight: #8c7851;
+  --secondary: #eaddcf;
+  --tertiary: #f25042;
 }
 
 @font-face {
