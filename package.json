@@ -2,7 +2,6 @@
   "name": "sierraalfawhiskey",
   "version": "0.0.1",
   "description": "The SierraAlfaWhiskey website (It's me! It's mine!)",
-  "main": "index.js",
   "scripts": {
     "dev": "export NODE_ENV=development && astro dev",
     "dev:h": "export NODE_ENV=development && astro dev --host",
@@ -30,10 +29,9 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "astro": "^3.0.7",
+    "astro": "^3.0.8",
     "astro-embed": "^0.5.1",
     "astro-icon": "^0.8.1",
-    "astro-pagefind": "^1.2.3",
     "config": "^3.3.9",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",

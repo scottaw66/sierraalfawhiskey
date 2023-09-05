@@ -1,6 +1,6 @@
 ---
+import { Icon } from "astro-icon";
 import config from "config";
-import Search from "astro-pagefind/components/Search";
 import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
 import { getCollection } from "astro:content";
@@ -10,7 +10,7 @@ let description = config.get("description");
 
 let allPosts = await getCollection("posts");
 allPosts = allPosts.sort(
-  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
 );
 
 const pageSize = config.get("posts.paginationSize");
@@ -18,7 +18,6 @@ const indexPosts = allPosts.slice(0, Number(pageSize));
 ---
 
 <Base title={title} description={description}>
-  <Search id="search" className="pagefind-ui" />
   <span data-pagefind-ignore>
     <section aria-label="Blog post list">
       {
@@ -31,10 +30,10 @@ const indexPosts = allPosts.slice(0, Number(pageSize));
         {
           allPosts.length > pageSize ? (
             <div>
-              <a href="/2">
-                Older Posts
+              <>
+                <a href="/2">Older Posts</a>
                 <Icon name="ic:round-arrow-circle-right" />
-              </a>
+              </>
             </div>
           ) : null
         }
