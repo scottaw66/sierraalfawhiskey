@@ -1,9 +1,12 @@
 ---
+import { Picture } from "astro:assets";
 import { Icon } from "astro-icon";
 import config from "config";
 import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
 import { getCollection } from "astro:content";
+
+import cat from "../assets/images/cat.png";
 
 const title = config.get("title");
 let description = config.get("description");
@@ -18,6 +21,13 @@ const indexPosts = allPosts.slice(0, Number(pageSize));
 ---
 
 <Base title={title} description={description}>
+  <Picture
+    src={cat}
+    formats={["avif", "webp"]}
+    width={300}
+    densities={[1.5, 2, 3]}
+    alt="A cat who wonders is a cat."
+  />
   <span data-pagefind-ignore>
     <section aria-label="Blog post list">
       {
