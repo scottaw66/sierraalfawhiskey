@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import { Icon } from "astro-icon";
+import Search from "astro-pagefind/components/Search";
 import config from "config";
 import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
@@ -28,6 +29,13 @@ const indexPosts = allPosts.slice(0, Number(pageSize));
     densities={[1.5, 2, 3]}
     alt="A cat who wonders is a cat."
   />
+
+  <Search
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{ showImages: false }}
+  />
+
   <span data-pagefind-ignore>
     <section aria-label="Blog post list">
       {
